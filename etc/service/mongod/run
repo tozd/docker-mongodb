@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+mkdir -p /var/lib/mongodb
+chown -Rh mongodb:mongodb /var/lib/mongodb
+
+[ -f /etc/service/mongod/run.initialization ] && source /etc/service/mongod/run.initialization
+
+exec chpst -u mongodb:mongodb /usr/bin/mongod --config /etc/mongodb.conf 2>&1
+
