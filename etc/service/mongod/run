@@ -3,7 +3,11 @@
 mkdir -p /var/lib/mongodb
 chown -Rh mongodb:mongodb /var/lib/mongodb
 
+if [ ! -f /var/lib/mongodb/mongodb.conf ]; then
+  cp /etc/mongodb.conf /var/lib/mongodb/mongodb.conf
+fi
+
 [ -f /etc/service/mongod/run.initialization ] && source /etc/service/mongod/run.initialization
 
-exec chpst -u mongodb:mongodb /usr/bin/mongod --config /etc/mongodb.conf 2>&1
+exec chpst -u mongodb:mongodb /usr/bin/mongod --config /var/lib/mongodb/mongodb.conf 2>&1
 
