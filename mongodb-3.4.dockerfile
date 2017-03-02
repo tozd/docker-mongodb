@@ -1,4 +1,4 @@
-FROM tozd/runit
+FROM tozd/runit:ubuntu-xenial
 
 EXPOSE 27017/tcp
 
