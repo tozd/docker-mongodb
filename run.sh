@@ -15,4 +15,4 @@ docker stop "${NAME}" || true
 sleep 1
 docker rm "${NAME}" || true
 sleep 1
-docker run --detach=true --restart=always --name "${NAME}" --volume "${MONGODB_LOG}:/var/log/mongod" --volume "${MONGODB_DATA}:/var/lib/mongodb" tozd/mongodb
+docker run --detach=true --restart=always --name "${NAME}" --volume "${MONGODB_LOG}:/var/log/mongod" --volume "${MONGODB_DATA}:/var/lib/mongodb" tozd/mongodb:3.4
