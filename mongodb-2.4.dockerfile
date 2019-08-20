@@ -9,3 +9,4 @@ RUN apt-get update -q -q && \
  apt-get install --yes --force-yes mongodb
 
 COPY ./etc /etc
+COPY ./etc-2.4 /etc
