@@ -1,6 +1,13 @@
 # tozd/mongodb
 
-https://gitlab.com/tozd/docker/mongodb
+<https://gitlab.com/tozd/docker/mongodb>
+
+Available as:
+
+* [`tozd/mongodb`](https://hub.docker.com/r/tozd/mongodb)
+* [`registry.gitlab.com/tozd/docker/mongodb`](https://gitlab.com/tozd/docker/mongodb/container_registry)
+
+## Description
 
 Image providing [MongoDB](https://www.mongodb.org/) as a service.
 
