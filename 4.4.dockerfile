@@ -5,7 +5,7 @@ EXPOSE 27017/tcp
 VOLUME /var/lib/mongodb
 VOLUME /var/log/mongod
 
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E162F504A20CDF15827F718D4B7C549A058F8B6B && \
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 20691EEC35216C63CAF66CE1656408E390CFB1F5 && \
  echo "deb http://repo.mongodb.org/apt/ubuntu $(cat /etc/lsb-release | grep DISTRIB_CODENAME | cut -d= -f2)/mongodb-org/4.4 multiverse" > /etc/apt/sources.list.d/mongodb.list && \
  apt-get update -q -q && \
  apt-get install --yes --force-yes mongodb-org && \
