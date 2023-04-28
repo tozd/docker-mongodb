@@ -18,4 +18,4 @@ echo "Sleeping"
 sleep 10
 
 echo "Testing"
-nc -z localhost 27017
+nc -z docker 27017
