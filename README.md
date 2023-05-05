@@ -26,8 +26,8 @@ Available as:
 
 ## Volumes
 
-- `/var/log/mongod`: log files
-- `/var/lib/mongodb`: persist this volume to not lose state
+- `/var/log/mongod`: Log files.
+- `/var/lib/mongodb`: Persist this volume to not lose state.
 
 ## Ports
 
