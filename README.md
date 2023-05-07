@@ -50,3 +50,8 @@ volume is empty.
 If you are extending this image, you can add a script `/etc/service/mongod/run.initialization`
 which will be run at a container startup, after the container is initialized, but before the
 MongoDB daemon is run.
+
+## GitHub mirror
+
+There is also a [read-only GitHub mirror available](https://github.com/tozd/docker-mongodb),
+if you need to fork the project there.
