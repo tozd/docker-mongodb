@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/tozd/docker/runit:ubuntu-trusty
+FROM registry.gitlab.com/tozd/docker/dinit:ubuntu-trusty
 
 EXPOSE 27017/tcp
 
@@ -10,4 +10,5 @@ RUN apt-get update -q -q && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc/service/mongod /etc/service/mongod
+COPY ./log-2.4 /etc/service/mongod/log
 COPY ./etc-2.4/mongodb.conf /etc/mongodb.conf
