@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/tozd/docker/runit:ubuntu-xenial
+FROM registry.gitlab.com/tozd/docker/dinit:ubuntu-xenial
 
 EXPOSE 27017/tcp
 
@@ -10,4 +10,5 @@ RUN apt-get update -q -q && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc/service/mongod /etc/service/mongod
+COPY ./log-2.6 /etc/service/mongod/log
 COPY ./etc/mongodb.conf /etc/mongodb.conf
