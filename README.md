@@ -9,7 +9,7 @@ Available as:
 
 ## Image inheritance
 
-[`tozd/base`](https://gitlab.com/tozd/docker/base) ← [`tozd/runit`](https://gitlab.com/tozd/docker/runit) ← `tozd/mongodb`
+[`tozd/base`](https://gitlab.com/tozd/docker/base) ← [`tozd/dinit`](https://gitlab.com/tozd/docker/dinit) ← `tozd/mongodb`
 
 ## Tags
 
@@ -26,8 +26,12 @@ Available as:
 
 ## Volumes
 
-- `/var/log/mongod`: Log files.
+- `/var/log/mongod`: Log files when `LOG_TO_STDOUT` is not set to `1`.
 - `/var/lib/mongodb`: Persist this volume to not lose state.
+
+## Variables
+
+- `LOG_TO_STDOUT`: If set to `1` output logs to stdout (retrievable using `docker logs`) instead of log volumes.
 
 ## Ports
 

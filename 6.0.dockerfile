@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/tozd/docker/runit:ubuntu-jammy
+FROM registry.gitlab.com/tozd/docker/dinit:ubuntu-jammy
 
 EXPOSE 27017/tcp
 
@@ -15,4 +15,5 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 39BD841E4BE5FB1
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc/service/mongod /etc/service/mongod
+COPY ./log /etc/service/mongod/log
 COPY ./etc/mongodb.conf /etc/mongodb.conf

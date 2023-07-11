@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/tozd/docker/runit:ubuntu-xenial
+FROM registry.gitlab.com/tozd/docker/dinit:ubuntu-xenial
 
 EXPOSE 27017/tcp
 
@@ -12,4 +12,5 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 42F3E95A2C4F082
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc/service/mongod /etc/service/mongod
+COPY ./log-3.0 /etc/service/mongod/log
 COPY ./etc/mongodb.conf /etc/mongodb.conf

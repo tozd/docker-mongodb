@@ -14,7 +14,7 @@ cleanup() {
 }
 
 echo "Running Docker image"
-docker run -d --name test -p 27017:27017 "${CI_REGISTRY_IMAGE}:${TAG}"
+docker run -d --name test -e LOG_TO_STDOUT=1 -p 27017:27017 "${CI_REGISTRY_IMAGE}:${TAG}"
 trap cleanup EXIT
 
 echo "Sleeping"
