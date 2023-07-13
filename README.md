@@ -55,6 +55,9 @@ If you are extending this image, you can add a script `/etc/service/mongod/run.i
 which will be run at a container startup, after the container is initialized, but before the
 MongoDB daemon is run.
 
+When `LOG_TO_STDOUT` is set to `1`, Docker image logs output to stdout and stderr. All stdout output is JSON.
+From MongoDB 4.4 on also stored logs are JSON.
+
 ## GitHub mirror
 
 There is also a [read-only GitHub mirror available](https://github.com/tozd/docker-mongodb),
