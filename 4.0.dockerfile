@@ -18,4 +18,4 @@ RUN mkdir ~/.gnupg && echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf && \
 
 COPY ./etc/service/mongod /etc/service/mongod
 COPY ./log-3.0 /etc/service/mongod/log
-COPY ./etc/mongodb.conf /etc/mongodb.conf
+COPY ./etc-2.6/mongodb.conf /etc/mongodb.conf

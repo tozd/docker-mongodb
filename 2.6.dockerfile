@@ -11,4 +11,4 @@ RUN apt-get update -q -q && \
 
 COPY ./etc/service/mongod /etc/service/mongod
 COPY ./log-2.6 /etc/service/mongod/log
-COPY ./etc/mongodb.conf /etc/mongodb.conf
+COPY ./etc-2.6/mongodb.conf /etc/mongodb.conf

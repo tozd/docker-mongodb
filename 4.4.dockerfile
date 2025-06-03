@@ -16,4 +16,4 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 20691EEC35216C6
 
 COPY ./etc/service/mongod /etc/service/mongod
 COPY ./log /etc/service/mongod/log
-COPY ./etc/mongodb.conf /etc/mongodb.conf
+COPY ./etc-2.6/mongodb.conf /etc/mongodb.conf
